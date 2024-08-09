@@ -31,7 +31,7 @@ export default function CriptoSearchForm() {
     <form className="form" onSubmit={handleSubmit}>
       {error && <ErrorMessage>{error}</ErrorMessage>}
       <div className="field">
-        <label htmlFor="currency">Moneda</label>
+        <label htmlFor="currency">Selecciona La Moneda</label>
         <select
           name="currency"
           id="currency"
@@ -47,7 +47,7 @@ export default function CriptoSearchForm() {
         </select>
       </div>
       <div className="field">
-        <label htmlFor="criptocurrency">Criptomoneda</label>
+        <label htmlFor="criptocurrency">Selecciona La Criptomoneda</label>
         <select
           name="criptocurrency"
           id="criptocurrency"
