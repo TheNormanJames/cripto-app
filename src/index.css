@@ -167,7 +167,7 @@ body {
 .todosCryptos {
  display: flex;
  /* width: 200%;width: 100%; */
- animation: scrollShowCryptos 15s 1s ease-in-out infinite alternate;
+ animation: scrollShowCryptos 25s 1s linear infinite;
 
  p {
   flex-shrink: 0;
@@ -189,8 +189,7 @@ body {
  }
 
  to {
-  translate: -30% 0%;
-  /* translate: 0% 0%; */
+  translate: -650% 0%;
  }
 }
 
@@ -220,6 +219,21 @@ body {
 
   span {
    display: initial;
+  }
+ }
+
+ .todosCryptos {
+  animation-duration: 12s;
+ }
+
+ @keyframes scrollShowCryptos {
+  from {
+   translate: 0% 0%;
+  }
+
+  to {
+   translate: -30% 0%;
+   /* translate: 0% 0%; */
   }
  }
 }
