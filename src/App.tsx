@@ -1,15 +1,20 @@
-import { useEffect } from 'react';
+import { useEffect, useMemo } from 'react';
 import CriptoSearchForm from './components/CriptoSearchForm';
 import { useCryptoStore } from './store';
 import CryptoPriceDisplay from './components/CryptoPriceDisplay';
+import Spinner from './components/Spinner';
 
 function App() {
-  const { fetchCryptos, cryptocurrencies } = useCryptoStore();
+  const { fetchCryptos, cryptocurrencies, result, loading } = useCryptoStore();
   useEffect(() => {
     fetchCryptos();
   }, []);
 
-  console.log(cryptocurrencies);
+  // console.log(cryptocurrencies);
+  const hasResult = useMemo(
+    () => !Object.values(result).includes(''),
+    [result]
+  );
 
   return (
     <>
@@ -21,7 +26,7 @@ function App() {
           <CriptoSearchForm />
         </div>
         <div className="content">
-          <CryptoPriceDisplay />
+          {loading ? <Spinner /> : hasResult && <CryptoPriceDisplay />}
         </div>
       </div>
       <div className="todosCryptos_Area">

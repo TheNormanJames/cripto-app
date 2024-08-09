@@ -70,11 +70,7 @@ body {
  flex-direction: column;
  align-items: center;
  gap: 2rem;
-
- label {
-  /* color: var(--black); */
-  color: var(--white);
- }
+ color: var(--white);
 
  .field {
   display: grid;
