@@ -37,7 +37,7 @@ function App() {
       <div className="todosCryptos_Area">
         <div className="todosCryptos">
           {cryptocurrencies.map((crypto) => (
-            <p>
+            <p key={crypto.CoinInfo.Name}>
               {crypto.CoinInfo.Name}: {''}
               <span>{crypto.DISPLAY.USD.PRICE}</span>
             </p>
