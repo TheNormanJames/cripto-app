@@ -32,7 +32,7 @@ export default function CryptoPriceDisplay() {
                 El precio más bajo del día: <span>{result.LOWDAY}</span>
               </p>
               <p>
-                Variación últimas 2 horas: <span>{result.HIGH24HOUR}</span>
+                Variación últimas 24 horas: <span>{result.HIGH24HOUR}</span>
               </p>
               <p>
                 Última actualización: <span>{result.LASTUPDATE}</span>
