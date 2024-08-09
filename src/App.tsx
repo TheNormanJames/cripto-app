@@ -25,9 +25,14 @@ function App() {
         <div className="content">
           <CriptoSearchForm />
         </div>
-        <div className="content">
+        {/* <div className="content">
           {loading ? <Spinner /> : hasResult && <CryptoPriceDisplay />}
-        </div>
+        </div> */}
+        {hasResult && (
+          <div className="content">
+            {loading ? <Spinner /> : <CryptoPriceDisplay />}
+          </div>
+        )}
       </div>
       <div className="todosCryptos_Area">
         <div className="todosCryptos">
